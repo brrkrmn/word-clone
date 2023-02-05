@@ -22,7 +22,7 @@ function Game() {
   }
 
   return <>
-    <GuessResults previousGuesses={previousGuesses} setPreviousGuesses={setPreviousGuesses} />
+    <GuessResults previousGuesses={previousGuesses} setPreviousGuesses={setPreviousGuesses} answer={answer} />
     <GuessInput addNewGuess={addNewGuess} />
   </>
 }
