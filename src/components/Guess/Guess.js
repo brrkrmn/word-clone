@@ -4,7 +4,7 @@ import { checkGuess } from "../../game-helpers"
 
 function Guess({ value, answer }) { 
   
-  function checkLetters(number) {
+  function getStatusOfLetter(number) {
     const result = checkGuess(value, answer)
     if(value) {
       return (
@@ -17,7 +17,7 @@ function Guess({ value, answer }) {
     <p className="guess">
       {range(5).map((num) => {
         return(
-          <span key={num} className={`cell ${checkLetters(num)}`}>
+          <span key={num} className={`cell ${getStatusOfLetter(num)}`}>
             {value ? value[num] : undefined}
           </span>
         )
